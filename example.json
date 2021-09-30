@@ -1,0 +1,54 @@
+{
+  "_id": "c-05",
+  "_parentId": "b-05",
+  "_type": "component",
+  "_component": "verticalItems",
+  "_classes": "",
+  "_layout": "full",
+  "title": "Vertical Items",
+  "displayTitle": "Vertical Items",
+  "body": "This is optional body text.",
+  "instruction": "This is the instruction text.",
+
+  "_items": [
+    {
+      "title": "Heading 1",
+      "body": "This is display text 1",
+      "_icon": {
+        "src": "",
+        "_classes": "",
+        "alt": ""
+      },
+      "_graphic": {
+        "src": "",
+        "alt": ""
+      }
+    },
+    {
+      "title": "Heading 2",
+      "body": "This is display text 2",
+      "_icon": {
+        "src": "",
+        "_classes": "",
+        "alt": ""
+      },
+      "_graphic": {
+        "src": "",
+        "alt": ""
+      }
+    },
+    {
+      "title": "Heading 3",
+      "body": "This is display text 3",
+      "_icon": {
+        "src": "",
+        "_classes": "",
+        "alt": ""
+      },
+      "_graphic": {
+        "src": "",
+        "alt": ""
+      }
+    }
+  ]
+}

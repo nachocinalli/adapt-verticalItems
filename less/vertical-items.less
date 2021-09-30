@@ -1,0 +1,206 @@
+.verticalitems {
+  &__header {
+    margin-bottom: 2em;
+    padding-bottom: 2em;
+  }
+  &__container {
+    position: relative;
+    padding: 1rem 0;
+  }
+  &__container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 18px;
+    height: 100%;
+    width: 4px;
+  }
+
+  &__top-inner,
+  &__bottom-inner {
+    padding: 1rem;
+    display: inline-block;
+  }
+  &__item {
+    position: relative;
+    margin: 2em 0;
+    overflow: hidden;
+  }
+  &__item-icon {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 40px;
+    height: 40px;
+  }
+  &__item__content {
+    position: relative;
+    margin-left: 2.5rem;
+    padding: 0.5rem 1rem;
+    text-align: left;
+  }
+  &__item-icon.is-hidden,
+  &__item__content.is-hidden {
+    visibility: hidden;
+  }
+  &__item__content p {
+    margin: 0;
+  }
+
+  &__item__content.is-hidden {
+    visibility: hidden;
+  }
+  &__item__content.anim {
+    visibility: visible;
+  }
+  &__item-icon.anim {
+    visibility: visible;
+  }
+  &.is-right {
+    .verticalitems__container::before {
+      right: 18px;
+      left: auto;
+    }
+    .verticalitems__item-icon {
+      left: auto;
+      right: 0px;
+    }
+    .verticalitems__item .verticalitems__item__content {
+      margin-left: 0;
+      margin-right: 4rem;
+    }
+    .verticalitems__item .verticalitems__item__content::before {
+      top: 16px;
+      left: 100%;
+    }
+  }
+  &.is-full {
+    @media only screen and (min-width: @device-width-large) {
+      .verticalitems__top,
+      .verticalitems__bottom {
+        text-align: center;
+      }
+      .verticalitems__item__content {
+        margin-left: 0rem;
+        padding: 1em;
+        width: 45%;
+        text-align: right;
+      }
+      .verticalitems__item__content::before {
+        top: 24px;
+        left: 100%;
+      }
+      .verticalitems__item__content .verticalitems__item__content-graphic {
+        position: absolute;
+        width: 100%;
+        left: 125%;
+        top: 0;
+        img {
+          min-width: auto;
+          margin: auto;
+        }
+      }
+      .verticalitems__item:nth-child(even) .verticalitems__item__content {
+        float: right;
+        text-align: left;
+      }
+      .verticalitems__item:nth-child(even)
+        .verticalitems__item__content::before {
+        top: 24px;
+        left: auto;
+        right: 100%;
+      }
+      .verticalitems__item:nth-child(even)
+        .verticalitems__item__content
+        .verticalitems__item__content-graphic {
+        left: auto;
+        right: 125%;
+        text-align: right;
+      }
+      .verticalitems__container::before {
+        left: 50%;
+        margin-left: -2px;
+      }
+      .verticalitems__item {
+        margin: 2.5em 0;
+      }
+
+      .verticalitems__item:first-child {
+        margin-top: 0;
+      }
+      .verticalitems__item:last-child {
+        margin-bottom: 0;
+      }
+      .verticalitems__item-icon {
+        width: 60px;
+        height: 60px;
+        left: 50%;
+        margin-left: -30px;
+      }
+    }
+  }
+}
+/*theme*/
+.verticalitems {
+  &__item__content {
+    margin-bottom: 1rem;
+    opacity: 0;
+    transform: translate3d(-60px, 0, 0);
+    .transition(all 0.8s ease-in-out);
+    &.anim {
+      opacity: 1;
+      transform: translate3d(0, 0, 0);
+    }
+  }
+  &__item-icon {
+    opacity: 0;
+    .transition(all 0.8s ease-in-out);
+    &.anim {
+      opacity: 1;
+    }
+  }
+
+  &__item-icon,
+  &__container::before,
+  &__top-inner,
+  &__bottom-inner {
+    background-color: @item-color;
+    border-radius: 1rem;
+    color: @item-color-inverted;
+  }
+  &__item-icon {
+    border-radius: 50%;
+    .icon {
+      display: block;
+      width: 24px;
+      height: 24px;
+      position: relative;
+      left: 50%;
+      top: 50%;
+      margin-left: -12px;
+      margin-top: -12px;
+    }
+  }
+  &.is-full {
+    @media only screen and (min-width: @device-width-large) {
+      .verticalitems__container {
+        padding: 2.5rem 0;
+      }
+      .verticalitems__item__content::before {
+        border-color: transparent;
+        border-left-color: @item-color;
+      }
+      .verticalitems__item:nth-child(even)
+        .verticalitems__item__content::before {
+        border-color: transparent;
+        border-right-color: @item-color;
+      }
+    }
+  }
+  &.is-right {
+    .verticalitems__item .verticalitems__item__content::before {
+      border-color: transparent;
+      border-left-color: @item-color;
+    }
+  }
+}

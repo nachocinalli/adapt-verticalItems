@@ -27,7 +27,7 @@ class VerticalItemsView extends ComponentView {
       const index = $(event.currentTarget).data('index');
       const item = this.model.getItem(index);
       item.set('_isVisited', true);
-      item.off('inview.componentItemView');
+      $(event.currentTarget).off('inview.componentItemView');
     }
   }
 

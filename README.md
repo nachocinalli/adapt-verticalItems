@@ -1,5 +1,5 @@
 # adapt-verticalItems
- **verticalItems** is a presentation component.
+ **verticalItems** is a presentation component. You can see it [here](https://adaptlearning-no-core.web.app/#/id/po-25)
 
 ## Settings Overview
 The attributes listed below are used in components.json and are properly formatted as JSON in  [*example.json*](https://github.com/nachocinalli/adapt-verticalItems/blob/master/example.json).

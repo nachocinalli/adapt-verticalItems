@@ -23,7 +23,7 @@ class VerticalItemsView extends ComponentView {
   onInviewItem(event, visible, visiblePartX, visiblePartY) {
     if (!visible) return;
     const pos = Adapt.device.screenSize === 'small' ? 'top' : 'both';
-    if (visiblePartY === pos) {
+    if (visiblePartY === pos || visiblePartY === 'both') {
       const index = $(event.currentTarget).data('index');
       const item = this.model.getItem(index);
       item.set('_isVisited', true);

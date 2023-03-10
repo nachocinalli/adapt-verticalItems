@@ -9,7 +9,7 @@
   "displayTitle": "Vertical Items",
   "body": "This is optional body text.",
   "instruction": "This is the instruction text.",
-
+  "_onScreenPercentInviewVertical": 10,
   "_items": [
     {
       "title": "Heading 1",

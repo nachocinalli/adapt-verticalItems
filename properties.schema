@@ -30,6 +30,15 @@
 			"help": "This is the instruction text",
 			"translatable": true
 		},
+		"_onScreenPercentInviewVertical": {
+			"type": "number",
+			"required": true,
+			"default": 1,
+			"title": "Percentage on-screen",
+			"inputType": "Number",
+			"validators": ["required", "number"],
+			"help": "The percentage of the vertical item that must be on-screen before the animation is triggered"
+		},
 		"top": {
 			"type": "string",
 			"required": false,
